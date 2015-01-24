@@ -3,6 +3,11 @@
 
 ## Write a short comment describing this function
 
+## The following function(invM) caches a inverse of a matrix
+## inside an environment
+## to avoid delayed computations further ahead
+
+
 makeCacheMatrix <- function(x = matrix()) {
 inverse <- NULL   ## creates a object in makeCaheMatrix's environment
 print(environment())
@@ -24,6 +29,8 @@ list(set = set,get = get,
 
 
 ## Write a short comment describing this function
+
+## cashSolve(invM) calls the inverse of that matrix from memory 
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
