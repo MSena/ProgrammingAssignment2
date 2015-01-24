@@ -9,13 +9,12 @@
 
 
 makeCacheMatrix <- function(x = matrix()) {
-inverse <- NULL   ## creates a object in makeCaheMatrix's environment
-print(environment())
-evn <- environment()
-print(parent.env(evn))
+
+      inverse <- NULL   
+
 set <- function(y) {    
-      x <<- y                    ##this is used, eventually, change the matrix x for y, with ...$set(y)
-      inverse <<- NULL           ##this resets the inverse.
+      x <<- y                   
+      inverse <<- NULL          
 }
 get <- function() x              ##writes matrix x to memory
 setsolve <- function(solve) inverse <<- solve
