@@ -1,11 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## Write a short comment describing this function
 
-## The following function(invM) caches a inverse of a matrix
+## The following f(invM) caches a inverse of a matrix M
 ## inside an environment
-## to avoid delayed computations further ahead
+## to avoid time consuming computations further ahead
 
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -27,9 +24,8 @@ list(set = set,get = get,
 }
 
 
-## Write a short comment describing this function
-
-## cashSolve(invM) calls the inverse of that matrix from memory 
+## cashSolve(invM) calls the inverse of matrix M from memory 
+## invM is not computed, it's retrieved 
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
