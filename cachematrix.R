@@ -13,14 +13,14 @@ set <- function(y) {
       x <<- y                   
       inverse <<- NULL          
 }
-get <- function() x              ##writes matrix x to memory
+get <- function() x              
 setsolve <- function(solve) inverse <<- solve
 getsolve <- function() inverse
 getevn <- function() environment()
 list(set = set,get = get,
      setsolve = setsolve,
      getsolve = getsolve,
-     getevn = getevn) ##this command creates a named list of 4 functions, holding the functions with the same name
+     getevn = getevn) 
 }
 
 
@@ -28,7 +28,7 @@ list(set = set,get = get,
 ## invM is not computed, it's retrieved 
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+       
       inverse <- x$getsolve()
       if(!is.null(inverse)) {
             message("getting cached data")
